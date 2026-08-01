@@ -31,6 +31,27 @@ def _validate_password(password, role):
         return f"{role.capitalize()} password must be exactly 4 digits."
     return None
 
+def _format_size(bytes_val):
+    try:
+        if not bytes_val:
+            return '—'
+        size = float(bytes_val)
+        for unit in ['B', 'KB', 'MB', 'GB']:
+            if size < 1024.0:
+                return f"{size:.1f} {unit}"
+            size /= 1024.0
+        return f"{size:.1f} TB"
+    except Exception:
+        return '—'
+
+def _get_note_size(note_field):
+    if not note_field:
+        return '—'
+    try:
+        return _format_size(note_field.size)
+    except Exception:
+        return '—'
+
 
 # ── Notification Helper ────────────────────────────────────────────────────────
 
@@ -453,7 +474,7 @@ def notes_list(request):
             'file_url':      request.build_absolute_uri(n.Note.url) if n.Note else '',
             'file_name':     os.path.basename(n.Note.name) if n.Note else '',
             'original_name': os.path.basename(n.Note.name) if n.Note else '',
-            'size':          _format_size(n.Note.size) if (n.Note and hasattr(n.Note, 'size')) else '—',
+            'size':          _get_note_size(n.Note),
         }
         for n in qs
     ]
