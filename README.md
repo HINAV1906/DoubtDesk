@@ -22,8 +22,8 @@
   - [Frontend Setup (React)](#2-frontend-setup-react)
   - [Database Seeding](#3-database-seeding)
 - [🔑 Demo & Seed Credentials](#-demo--seed-credentials)
-- [📡 API Documentation](#-api-documentation)
 - [📋 CSV Bulk Import Format](#-csv-bulk-import-format)
+- [☁️ Render.com Deployment Guide](#️-rendercom-deployment-guide)
 - [🤝 Contributing & License](#-contributing--license)
 
 ---
@@ -424,7 +424,30 @@ RollNo,Enroll,Name,Div,Branch,Pass
 FullName,ShortName,Subject,MoNumber,Pass
 Dr. R. K. Patel,RKP,Computer Engineering,+91 9876543210,1234
 Prof. S. M. Shah,SMS,Data Structures,+91 9876543211,1234
-```
+---
+
+## ☁️ Render.com Deployment Guide
+
+This project includes pre-configured Render deployment configuration (`render.yaml`, `build.sh`, `Procfile`, `requirements.txt`, and `runtime.txt`).
+
+### Option 1: 1-Click Render Blueprint Deployment (Recommended)
+1. Push your repository to **GitHub / GitLab**.
+2. Log in to [Render.com Dashboard](https://dashboard.render.com/).
+3. Click **New +** -> **Blueprint**.
+4. Connect your GitHub repository.
+5. Render will automatically detect `render.yaml`, set up the **PostgreSQL Database** (`doubtdesk-db`), install Python & Node dependencies, build the React SPA, apply migrations, and deploy the unified web service.
+
+### Option 2: Manual Web Service Deployment on Render
+1. Create a **New Web Service** on Render.
+2. Select repository and set runtime to **Python 3**.
+3. Set **Build Command**: `./build.sh`
+4. Set **Start Command**: `gunicorn --chdir backend backend.wsgi:application`
+5. Add Environment Variables:
+   - `PYTHON_VERSION` = `3.10.12`
+   - `SECRET_KEY` = *(Generate a secure random string)*
+   - `DEBUG` = `False`
+   - `ALLOWED_HOSTS` = `*`
+   - `DATABASE_URL` = *(Internal Connection String from Render PostgreSQL)*
 
 ---
 
