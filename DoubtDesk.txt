@@ -1,0 +1,25 @@
+Data Base : 
+
+Student => (username = enrollment number , Password = 123456 )
+
+Faculty => (username = ShortName , Password = 987654 )
+
+1. Student
+
+=> Feilds : Enroll | Name | Batch | Pass
+
+2. Faculty 
+
+=> Feilds : FullName | ShortName | Subject | MoNumber | Pass
+
+3. Notes
+
+=> Feilds : Sem | Faze | Faculty
+
+4. Doubt
+
+=> Feilds : Enroll | Name | Batch | Sub | Faculty | Doubt | Photo | status
+
+5. Solve
+
+=> Feilds : FacultyName | ShortName | Subject | Answer | Photo

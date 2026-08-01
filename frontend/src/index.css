@@ -1,0 +1,63 @@
+:root {
+  --brand-navy: #1B263B;
+  --brand-navy-light: #2D3E5E;
+  --brand-forest: #3B5232;
+  --brand-forest-hover: #2F4228;
+  --brand-sage: #587C56;
+  --brand-sage-light: #8DA382;
+  --brand-accent-green: #7F9872;
+  --brand-cream-bg: #F6ECD9;
+  --brand-cream-light: #FAF5EA;
+  --brand-text-dark: #1B263B;
+  --brand-text-muted: #4A5568;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--brand-cream-bg);
+  color: var(--brand-text-dark);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+#root {
+  background-color: var(--brand-cream-bg);
+  min-height: 100vh;
+}
+
+h1, h2, h3, .serif-font {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Clear, highly visible placeholder styling across all inputs and textareas */
+::placeholder {
+  color: #718096;
+  opacity: 0.85;
+}
+
+/* Explicit white placeholders for search bars and dark inputs */
+.search-bar::placeholder,
+.search-input::placeholder,
+input.search-bar::placeholder,
+input[type="text"].search-bar::placeholder {
+  color: #FFFFFF !important;
+  opacity: 0.95 !important;
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: #718096;
+  opacity: 0.85;
+}

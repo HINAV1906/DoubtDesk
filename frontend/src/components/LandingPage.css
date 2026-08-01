@@ -1,0 +1,1149 @@
+/* Landing Page Root & Color Tokens */
+.landing-page-root {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  box-sizing: border-box;
+}
+
+.serif-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #1B263B;
+  margin: 0 0 0.8rem 0;
+  letter-spacing: -0.5px;
+}
+
+.section-kicker {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #3B5232;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtext {
+  font-size: 1.08rem;
+  color: #4A5568;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.section-header-center {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* ── 1. HERO SECTION (Picture 1 exact replica) ── */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2.5rem;
+  padding-top: 1rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+}
+
+.hero-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(59, 82, 50, 0.1);
+  color: #3B5232;
+  border: 1px solid rgba(59, 82, 50, 0.2);
+  padding: 0.4rem 1.1rem;
+  border-radius: 9999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* Picture 1 Serif Title: "Browse everything." */
+.hero-serif-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(3.2rem, 7.5vw, 6.2rem);
+  font-weight: 800;
+  color: #1B263B;
+  line-height: 1.05;
+  letter-spacing: -1.8px;
+  margin: 0 0 1.2rem 0;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #4A5568;
+  max-width: 680px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Picture 1 Showcase Container with Sage Green Backdrop Card */
+.hero-showcase-wrapper {
+  width: 100%;
+  max-width: 1080px;
+  margin-top: 1rem;
+  position: relative;
+}
+
+/* Sage Green Card Container Backdrop from Picture 1 */
+.hero-accent-card-bg {
+  background-color: #7F9872;
+  border-radius: 36px;
+  padding: 2rem 2rem 0 2rem;
+  box-shadow: 0 25px 50px -12px rgba(27, 38, 59, 0.18);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Tablet / Desktop Frame */
+.showcase-device-frame {
+  background: #FAF5EA;
+  border-radius: 20px 20px 0 0;
+  border: 3px solid #1B263B;
+  border-bottom: none;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.frame-header-bar {
+  background: #EFE6D5;
+  border-bottom: 1px solid rgba(27, 38, 59, 0.12);
+  padding: 0.85rem 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.frame-breadcrumbs {
+  font-size: 0.85rem;
+  color: #4A5568;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+}
+
+.crumb-active {
+  font-weight: 700;
+  color: #1B263B;
+}
+
+.dept-select-input {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(27, 38, 59, 0.18);
+  border-radius: 9999px;
+  padding: 0.4rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #1B263B;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Main Stat Banner inside Frame */
+.showcase-main-stat {
+  padding: 1.8rem 2.2rem 1rem 2.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.stat-number-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.stat-percentage {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: #1B263B;
+  line-height: 1;
+}
+
+.stat-label {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  color: #3B5232;
+  font-weight: 600;
+}
+
+.showcase-metric-tabs {
+  display: flex;
+  background: rgba(27, 38, 59, 0.06);
+  padding: 3px;
+  border-radius: 9999px;
+}
+
+.metric-tab-btn {
+  background: none;
+  border: none;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #4A5568;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.metric-tab-btn.active {
+  background: #FFFFFF;
+  color: #1B263B;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Years bar */
+.showcase-years-bar {
+  padding: 0.6rem 2.2rem;
+  display: flex;
+  gap: 2.5rem;
+  border-bottom: 1px dashed rgba(27, 38, 59, 0.12);
+}
+
+.year-step-btn {
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #718096;
+  cursor: pointer;
+  padding: 2px 0;
+  position: relative;
+}
+
+.year-step-btn.active {
+  color: #1B263B;
+  font-weight: 700;
+}
+
+.year-step-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #3B5232;
+}
+
+/* Visual Graph with Landscape & Node Pins matching Picture 1 */
+.showcase-visual-graph {
+  height: 280px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.graph-landscape-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.graph-node-pins {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.node-pin-item {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(-50%);
+}
+
+.pin-vertical-line {
+  width: 2px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+}
+
+.pin-head-dot {
+  width: 10px;
+  height: 10px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  margin-top: -2px;
+}
+
+.pin-tooltip {
+  background: #FFFFFF;
+  color: #1B263B;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.graph-overlay-badges {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.overlay-badge-chip {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  padding: 0.6rem 1.1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.overlay-badge-chip .chip-icon {
+  font-size: 1.3rem;
+}
+
+.overlay-badge-chip strong {
+  display: block;
+  font-size: 0.88rem;
+  color: #1B263B;
+}
+
+.overlay-badge-chip small {
+  font-size: 0.74rem;
+  color: #718096;
+}
+
+/* Picture 1 "Trusted by:" bottom left bar */
+.trusted-by-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  padding-left: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.trusted-by-label {
+  font-size: 0.85rem;
+  color: #718096;
+  font-weight: 600;
+}
+
+.trusted-logos-list {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  flex-wrap: wrap;
+}
+
+.trusted-logo-item {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1B263B;
+  opacity: 0.8;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 0.35rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid rgba(27, 38, 59, 0.08);
+}
+
+
+/* ── 2. DEDICATED DIRECT ROLE-BASED LOGIN PORTAL SECTION ── */
+.login-portal-section {
+  scroll-margin-top: 90px;
+  width: 100%;
+}
+
+.login-section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.landing-login-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.login-card-main {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 28px;
+  box-shadow: 0 20px 45px -10px rgba(27, 38, 59, 0.12);
+  border: 1px solid rgba(27, 38, 59, 0.12);
+  overflow: hidden;
+}
+
+.role-tabs-bar {
+  display: flex;
+  background: #F3EBDC;
+  border-bottom: 1px solid rgba(27, 38, 59, 0.08);
+}
+
+.role-tab-btn {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 1.2rem 1rem;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #4A5568;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.role-tab-btn:hover {
+  color: #1B263B;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.role-tab-btn.active {
+  background: #FFFFFF;
+  color: #3B5232;
+  border-bottom-color: #3B5232;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.role-tab-btn .role-icon {
+  font-size: 1.2rem;
+}
+
+.login-card-body {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  padding: 2.5rem;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.login-card-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+  text-align: left;
+  border-right: 1px solid rgba(27, 38, 59, 0.08);
+  padding-right: 2rem;
+}
+
+.login-brand-illustration {
+  height: 95px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  border-radius: 12px;
+}
+
+.role-welcome-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.6rem;
+  color: #1B263B;
+  margin: 0;
+}
+
+.role-welcome-desc {
+  font-size: 0.92rem;
+  color: #4A5568;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.quick-demo-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+}
+
+.quick-demo-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #718096;
+  text-transform: uppercase;
+}
+
+.quick-demo-btn {
+  background: rgba(59, 82, 50, 0.08);
+  color: #3B5232;
+  border: 1px dashed #3B5232;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.quick-demo-btn:hover {
+  background: #3B5232;
+  color: #FFFFFF;
+}
+
+/* Integrated Login Form */
+.integrated-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  text-align: left;
+}
+
+.integrated-login-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.integrated-login-form label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1B263B;
+}
+
+.integrated-login-form input {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid rgba(27, 38, 59, 0.18);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background: #FAF8F5;
+}
+
+.integrated-login-form input:focus {
+  border-color: #3B5232;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(59, 82, 50, 0.15);
+}
+
+.login-error-alert {
+  background: #FFF5F5;
+  border: 1px solid #FEB2B2;
+  color: #C53030;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  font-size: 0.84rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-extra-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.change-pass-link {
+  font-size: 0.82rem;
+  color: #3B5232;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.change-pass-link:hover {
+  text-decoration: underline;
+}
+
+.login-submit-btn {
+  background: #3B5232;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.85rem 1.5rem;
+  border-radius: 12px;
+  font-size: 0.96rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 16px rgba(59, 82, 50, 0.25);
+  margin-top: 0.4rem;
+}
+
+.login-submit-btn:hover {
+  background: #2F4228;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(59, 82, 50, 0.35);
+}
+
+.login-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.arrow-btn-icon {
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.login-submit-btn:hover .arrow-btn-icon {
+  transform: translateX(3px);
+}
+
+
+/* ── 3. BENEFITS SECTION ── */
+.features-section {
+  scroll-margin-top: 90px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.benefit-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 2.2rem;
+  border: 1px solid rgba(27, 38, 59, 0.1);
+  box-shadow: 0 10px 30px rgba(27, 38, 59, 0.05);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(27, 38, 59, 0.1);
+}
+
+.benefit-icon-wrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.benefit-icon-wrapper.student-theme {
+  background: rgba(59, 82, 50, 0.12);
+  color: #3B5232;
+}
+
+.benefit-icon-wrapper.faculty-theme {
+  background: rgba(27, 38, 59, 0.1);
+  color: #1B263B;
+}
+
+.benefit-icon-wrapper.admin-theme {
+  background: rgba(141, 163, 130, 0.2);
+  color: #3B5232;
+}
+
+.benefit-card h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  color: #1B263B;
+  margin: 0 0 1rem 0;
+}
+
+.benefit-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.benefit-card li {
+  font-size: 0.92rem;
+  color: #4A5568;
+  line-height: 1.5;
+}
+
+
+/* ── 4. SPECIFICATIONS SECTION ── */
+.specifications-section {
+  scroll-margin-top: 90px;
+}
+
+.specs-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.spec-item-card {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(27, 38, 59, 0.1);
+  border-radius: 16px;
+  padding: 1.8rem;
+  text-align: left;
+  transition: all 0.25s ease;
+}
+
+.spec-item-card:hover {
+  background: #FFFFFF;
+  border-color: #3B5232;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+.spec-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.spec-item-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1B263B;
+  margin: 0 0 0.5rem 0;
+}
+
+.spec-item-card p {
+  font-size: 0.88rem;
+  color: #4A5568;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+/* ── 5. HOW-TO SECTION ── */
+.howto-section {
+  scroll-margin-top: 90px;
+}
+
+.howto-steps-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.howto-step-card {
+  flex: 1;
+  min-width: 250px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 2.2rem 1.8rem;
+  border: 1px solid rgba(27, 38, 59, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  text-align: left;
+  position: relative;
+}
+
+.step-number-circle {
+  width: 44px;
+  height: 44px;
+  background: #3B5232;
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+}
+
+.howto-step-card h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.3rem;
+  color: #1B263B;
+  margin: 0 0 0.6rem 0;
+}
+
+.howto-step-card p {
+  font-size: 0.9rem;
+  color: #4A5568;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.step-arrow-divider {
+  font-size: 1.6rem;
+  color: #3B5232;
+  opacity: 0.6;
+}
+
+
+/* ── 6. CONTACT US SECTION ── */
+.contact-section {
+  scroll-margin-top: 90px;
+}
+
+.contact-wrapper-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 28px;
+  padding: 3rem;
+  box-shadow: 0 18px 45px rgba(27, 38, 59, 0.08);
+  border: 1px solid rgba(27, 38, 59, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  text-align: left;
+  align-items: center;
+}
+
+.contact-info-col p {
+  font-size: 1rem;
+  color: #4A5568;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.contact-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1B263B;
+}
+
+.contact-quick-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-quick-form input,
+.contact-quick-form textarea {
+  padding: 0.8rem 1.1rem;
+  border: 1.5px solid rgba(27, 38, 59, 0.15);
+  border-radius: 12px;
+  font-size: 0.92rem;
+  font-family: inherit;
+  background: #FAF8F5;
+  outline: none;
+}
+
+.contact-quick-form input:focus,
+.contact-quick-form textarea:focus {
+  border-color: #3B5232;
+  background: #FFFFFF;
+}
+
+
+/* ── 7. FOOTER ── */
+.landing-footer {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 3rem;
+  margin-bottom: -4rem;
+  background: rgba(250, 244, 232, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(27, 38, 59, 0.12);
+  padding: 3.5rem 2.5rem 1.8rem 2.5rem;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.footer-container {
+  max-width: 1320px;
+  margin: 0 auto 2.5rem auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.footer-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.footer-logo-img {
+  height: 36px;
+  width: auto;
+  border-radius: 6px;
+}
+
+.footer-desc {
+  font-size: 0.92rem;
+  color: #4A5568;
+  max-width: 340px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.footer-links-col h4,
+.footer-status-col h4 {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #3B5232;
+  margin: 0 0 1rem 0;
+}
+
+.footer-links-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-links-col a,
+.footer-links-col button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #1B263B;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  transition: color 0.2s ease;
+  opacity: 0.85;
+}
+
+.footer-links-col a:hover,
+.footer-links-col button:hover {
+  color: #3B5232;
+  opacity: 1;
+}
+
+.system-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(59, 82, 50, 0.1);
+  border: 1px solid rgba(59, 82, 50, 0.25);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #3B5232;
+}
+
+.status-dot-green {
+  width: 8px;
+  height: 8px;
+  background: #38A169;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #38A169;
+}
+
+.footer-bottom-bar {
+  max-width: 1320px;
+  margin: 0 auto;
+  border-top: 1px dashed rgba(27, 38, 59, 0.15);
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #718096;
+  text-align: center;
+}
+
+
+/* ── 8. OPTIONAL MODAL ── */
+.modal-backdrop-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(27, 38, 59, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal-content-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  text-align: left;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: #718096;
+  cursor: pointer;
+}
+
+.modal-header-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-logo {
+  height: 38px;
+  width: auto;
+  border-radius: 6px;
+}
+
+.modal-header-row h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.3rem;
+  color: #1B263B;
+  margin: 0;
+}
+
+.modal-role-selector {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  background: #FAF5EA;
+  padding: 4px;
+  border-radius: 12px;
+}
+
+.modal-role-chip {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #718096;
+  cursor: pointer;
+}
+
+.modal-role-chip.active {
+  background: #FFFFFF;
+  color: #3B5232;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.modal-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-login-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.modal-login-form label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1B263B;
+}
+
+.modal-login-form input {
+  padding: 0.7rem 0.9rem;
+  border: 1px solid rgba(27, 38, 59, 0.18);
+  border-radius: 10px;
+  font-size: 0.92rem;
+}
+
+.modal-error-msg {
+  color: #E53E3E;
+  font-size: 0.82rem;
+  margin: 0;
+}
+
+
+/* ── RESPONSIVE MEDIA QUERIES ── */
+@media (max-width: 900px) {
+  .hero-serif-title {
+    font-size: 3rem;
+  }
+  
+  .login-card-body {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  .login-card-left {
+    border-right: none;
+    border-bottom: 1px solid rgba(27, 38, 59, 0.08);
+    padding-right: 0;
+    padding-bottom: 1.5rem;
+  }
+
+  .contact-wrapper-card {
+    grid-template-columns: 1fr;
+  }
+
+  .howto-steps-flex {
+    flex-direction: column;
+  }
+
+  .step-arrow-divider {
+    transform: rotate(90deg);
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

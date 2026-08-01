@@ -1,0 +1,290 @@
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--brand-cream-bg, #F6ECD9);
+  color: var(--brand-text-dark, #1B263B);
+}
+
+.navbar-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(250, 244, 232, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(27, 38, 59, 0.08);
+  padding: 0.9rem 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.navbar-brand:hover {
+  transform: translateY(-1px);
+}
+
+.navbar-logo {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.brand-text-wrapper {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+}
+
+.brand-doubt {
+  color: #1B263B;
+}
+
+.brand-desk {
+  color: #3B5232;
+  margin-left: 1px;
+}
+
+.navbar-menu-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav-btn,
+.navbar-link {
+  background: none;
+  border: none;
+  color: #1B263B;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 10px;
+  text-decoration: none;
+  font-family: inherit;
+  transition: color 0.2s ease, opacity 0.2s ease;
+  opacity: 0.85;
+}
+
+.navbar-nav-btn:hover,
+.navbar-link:hover {
+  color: #3B5232;
+  opacity: 1;
+}
+
+/* Right Actions */
+.navbar-right-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* Dark Green Pill CTA Button matching Picture 1 */
+.navbar-cta-pill {
+  background: #3B5232;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.65rem 1.4rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(59, 82, 50, 0.25);
+  text-decoration: none;
+}
+
+.navbar-cta-pill:hover {
+  background: #2F4228;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 82, 50, 0.35);
+}
+
+.navbar-cta-pill .arrow-icon {
+  font-size: 1.05rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.navbar-cta-pill:hover .arrow-icon {
+  transform: translate(2px, -2px);
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-profile-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: #FFFFFF;
+  color: #1B263B;
+  border: 1px solid rgba(27, 38, 59, 0.15);
+  padding: 0.55rem 1.1rem;
+  border-radius: 9999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.navbar-profile-btn:hover {
+  border-color: #3B5232;
+  color: #3B5232;
+  transform: translateY(-1px);
+}
+
+.navbar-logout-btn {
+  background: #FFF0F0;
+  color: #E53E3E;
+  border: 1px solid rgba(229, 62, 62, 0.2);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navbar-logout-btn:hover {
+  background: #E53E3E;
+  color: #FFFFFF;
+}
+
+/* Mobile Hamburger Toggle */
+.mobile-hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  width: 36px;
+  height: 36px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-bar {
+  width: 22px;
+  height: 2px;
+  background-color: #1B263B;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hamburger-bar::before,
+.hamburger-bar::after {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 2px;
+  background-color: #1B263B;
+  transition: all 0.3s ease;
+}
+
+.hamburger-bar::before {
+  top: -7px;
+}
+
+.hamburger-bar::after {
+  bottom: -7px;
+}
+
+/* Main Container & Overlay */
+.home-container {
+  flex: 1;
+  background-size: 600px auto;
+  background-position: top center;
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.home-overlay {
+  flex: 1;
+  width: 100%;
+  background-color: rgba(246, 236, 217, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 68px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .navbar-header {
+    padding: 0.8rem 1.2rem;
+  }
+  
+  .mobile-hamburger-btn {
+    display: flex;
+  }
+
+  .navbar-menu-wrapper {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: #FAF4E8;
+    border-bottom: 1px solid rgba(27, 38, 59, 0.1);
+    padding: 1.5rem;
+    display: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar-menu-wrapper.mobile-active {
+    display: block;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+  }
+}

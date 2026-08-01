@@ -1,0 +1,417 @@
+.profile-page-container {
+  display: flex;
+  width: 100%;
+  min-height: calc(100vh - 68px);
+  align-items: flex-start;
+  text-align: left;
+  position: relative;
+}
+
+/* Force parent overlay to stretch full height and width for sidebar layout */
+.app-wrapper:has(.profile-page-container) .home-overlay {
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+/* Sidebar styling - Sticky fixed height aligned with viewport top right below navbar */
+.profile-sidebar {
+  position: sticky;
+  top: 68px;
+  width: 190px;
+  height: calc(100vh - 68px);
+  max-height: calc(100vh - 68px);
+  background: rgba(250, 244, 232, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-right: 1px solid rgba(27, 38, 59, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 1.1rem 1.8rem;
+  box-shadow: 4px 0 20px rgba(27, 38, 59, 0.06);
+  flex-shrink: 0;
+  z-index: 1000;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  box-sizing: border-box;
+  align-self: flex-start;
+}
+
+.profile-sidebar.hidden {
+  width: 0;
+  padding-left: 0;
+  padding-right: 0;
+  border-right: 1px solid transparent;
+  box-shadow: none;
+}
+
+.profile-sidebar.hidden .sidebar-header,
+.profile-sidebar.hidden .sidebar-nav {
+  display: none;
+}
+
+/* Sticky sidebar header so hide button ◀ never scrolls out */
+.sidebar-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(250, 244, 232, 0.96);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-header h3 {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #3B5232;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar-link {
+  color: #1B263B;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 10px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  opacity: 0.85;
+}
+
+.sidebar-link:hover {
+  background: rgba(59, 82, 50, 0.08);
+  color: #3B5232;
+  border-color: rgba(59, 82, 50, 0.15);
+  transform: translateX(3px);
+  opacity: 1;
+}
+
+.sidebar-link.active {
+  background: #3B5232;
+  color: #FFFFFF;
+  border-color: #3B5232;
+  opacity: 1;
+  box-shadow: 0 4px 12px rgba(59, 82, 50, 0.2);
+}
+
+.sidebar-icon {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Main Content styling */
+.profile-main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  max-height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Sidebar toggle button — sits inside the sidebar header on the right */
+.sidebar-toggle-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(27, 38, 59, 0.18);
+  color: #1B263B;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.sidebar-toggle-btn:hover {
+  background: #3B5232;
+  color: #FFFFFF;
+  border-color: #3B5232;
+  transform: scale(1.1);
+}
+
+/* Open button ▶ — Fixed position matching hide button height and styling */
+.sidebar-open-btn {
+  position: fixed;
+  top: calc(68px + 0.4rem);
+  left: 0.8rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(27, 38, 59, 0.18);
+  color: #1B263B;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  z-index: 1001;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-open-btn:hover {
+  background: #3B5232;
+  color: #FFFFFF;
+  border-color: #3B5232;
+  transform: scale(1.1);
+}
+
+/* Single Profile Card styling */
+.single-card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 440px;
+  width: 100%;
+}
+
+.profile-card {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(27, 38, 59, 0.1);
+  box-shadow: 0 16px 40px rgba(27, 38, 59, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 24px;
+  padding: 2.5rem;
+  color: #1B263B;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(59, 82, 50, 0.12);
+  border-color: #3B5232;
+}
+
+.summary-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Horizontal Profile Header Upperside */
+.profile-header-horizontal {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  text-align: left;
+}
+
+.profile-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+}
+
+.profile-header-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.profile-header-horizontal .profile-avatar-wrapper {
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.profile-header-horizontal .student-name {
+  margin: 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1B263B;
+}
+
+.profile-header-horizontal .student-role {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #3B5232;
+  font-weight: 700;
+}
+
+.profile-header-horizontal .student-badge {
+  margin: 0;
+}
+
+.profile-avatar-wrapper {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+
+.profile-avatar-glow {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(135deg, #3B5232, #7F9872);
+  border-radius: 50%;
+  filter: blur(8px);
+  opacity: 0.6;
+}
+
+.profile-avatar {
+  position: relative;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3B5232 0%, #1B263B 100%);
+  border: 2px solid #FFFFFF;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.student-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1B263B;
+  margin: 0 0 0.2rem 0;
+}
+
+.student-role {
+  font-size: 0.85rem;
+  color: #3B5232;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.student-badge {
+  background: rgba(59, 82, 50, 0.1);
+  border: 1px solid rgba(59, 82, 50, 0.25);
+  padding: 0.4rem 0.9rem;
+  border-radius: 30px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #3B5232;
+  max-width: 280px;
+  line-height: 1.3;
+}
+
+.profile-info-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(27, 38, 59, 0.1);
+  margin: 1.5rem 0;
+}
+
+.single-card-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Horizontal layout extension */
+.single-card-grid.horizontal-card-grid {
+  max-width: 860px;
+  width: 100%;
+}
+
+.horizontal-details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.horizontal-details .detail-item {
+  align-items: center;
+  text-align: center;
+  background: rgba(250, 244, 232, 0.6);
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(27, 38, 59, 0.08);
+  transition: all 0.2s ease;
+}
+
+.horizontal-details .detail-item:hover {
+  background: #FFFFFF;
+  border-color: #3B5232;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 82, 50, 0.1);
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: left;
+}
+
+.detail-label {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #3B5232;
+}
+
+.detail-value {
+  font-size: 0.92rem;
+  color: #1B263B;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .horizontal-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-page-container {
+    flex-direction: column;
+  }
+
+  .profile-sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid rgba(27, 38, 59, 0.1);
+    padding: 1rem;
+  }
+}

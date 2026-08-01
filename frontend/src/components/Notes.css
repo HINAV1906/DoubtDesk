@@ -1,0 +1,339 @@
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 820px;
+  padding: 1rem;
+}
+
+.notes-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1B263B;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Sem Selection */
+.sem-selection-flow {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 440px;
+}
+
+.sem-buttons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.sem-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(27, 38, 59, 0.1);
+  box-shadow: 0 12px 30px rgba(27, 38, 59, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 1.3rem 2.2rem;
+  color: #1B263B;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: left;
+}
+
+.sem-btn:hover {
+  transform: translateY(-3px);
+  background: #FFFFFF;
+  border-color: #3B5232;
+  box-shadow: 0 16px 40px rgba(59, 82, 50, 0.15);
+}
+
+.sem-btn svg {
+  color: #3B5232;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.sem-icon {
+  color: #3B5232;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.sem-btn:hover .sem-icon {
+  transform: scale(1.1);
+}
+
+.sem-btn:hover svg:last-child {
+  transform: translateX(4px);
+}
+
+/* Phase Selection */
+.phase-selection-flow {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flow-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  position: relative;
+  width: 100%;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  color: #3B5232;
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+  color: #1B263B;
+}
+
+.phase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 620px;
+}
+
+.phase-card-btn {
+  position: relative;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(27, 38, 59, 0.1);
+  box-shadow: 0 12px 30px rgba(27, 38, 59, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 2.2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #1B263B;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: left;
+  overflow: hidden;
+}
+
+.phase-card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #3B5232, #7F9872);
+  opacity: 0.7;
+  transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+.phase-card-btn:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(59, 82, 50, 0.18);
+  border-color: #3B5232;
+}
+
+.phase-card-btn:hover .phase-card-accent {
+  opacity: 1;
+  height: 5px;
+}
+
+.phase-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1B263B;
+}
+
+.phase-icon {
+  color: #3B5232;
+  transition: transform 0.3s ease;
+}
+
+.phase-card-btn:hover .phase-icon {
+  transform: scale(1.1);
+}
+
+.phase-card-btn.phase-active {
+  border-color: #3B5232;
+  background: rgba(59, 82, 50, 0.1);
+}
+
+.phase-subtitle {
+  font-size: 0.88rem;
+  color: #718096;
+}
+
+.notes-details-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.phase-selected-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.phase-selected-label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1B263B;
+  text-align: center;
+}
+
+.phase-selected-sem {
+  color: #1B263B;
+}
+
+.phase-selected-divider {
+  color: #718096;
+  font-weight: 300;
+}
+
+.phase-selected-phase {
+  color: #3B5232;
+}
+
+.notes-list-direct {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 520px;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.notes-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.4rem;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(27, 38, 59, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
+}
+
+.notes-list-item:hover {
+  background: #FFFFFF;
+  border-color: #3B5232;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(59, 82, 50, 0.1);
+}
+
+.notes-item-label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #3B5232;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.notes-item-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1B263B;
+  text-align: right;
+}
+
+.direct-download {
+  margin-top: 1rem;
+  align-self: center;
+}
+
+.notes-profile-card {
+  max-width: 480px;
+  width: 100%;
+}
+
+.download-all-btn {
+  background: #3B5232;
+  border: none;
+  border-radius: 12px;
+  padding: 0.9rem 2.4rem;
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  box-shadow: 0 6px 18px rgba(59, 82, 50, 0.25);
+}
+
+.download-all-btn:hover {
+  background: #2F4228;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(59, 82, 50, 0.35);
+}
+
+/* Faculty Short Name Filter Buttons Bar */
+.faculty-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.faculty-filter-btn {
+  background: rgba(250, 244, 232, 0.8);
+  border: 1px solid rgba(27, 38, 59, 0.12);
+  color: #1B263B;
+  padding: 0.5rem 1.1rem;
+  border-radius: 20px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.faculty-filter-btn:hover {
+  background: rgba(59, 82, 50, 0.12);
+  border-color: #3B5232;
+  color: #3B5232;
+}
+
+.faculty-filter-btn.active {
+  background: #3B5232;
+  border-color: #3B5232;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(59, 82, 50, 0.25);
+}

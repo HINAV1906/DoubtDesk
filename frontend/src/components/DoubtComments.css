@@ -1,0 +1,131 @@
+.comments-wrapper {
+  margin-top: 14px;
+  border-top: 1px solid rgba(27, 38, 59, 0.1);
+  padding-top: 10px;
+}
+
+.comments-toggle-btn {
+  background: rgba(59, 82, 50, 0.08);
+  border: 1px solid rgba(59, 82, 50, 0.2);
+  color: #3B5232;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.comments-toggle-btn:hover {
+  background: #3B5232;
+  color: #FFFFFF;
+}
+
+.comments-box {
+  background: rgba(250, 244, 232, 0.8);
+  border: 1px solid rgba(27, 38, 59, 0.1);
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.comments-list {
+  max-height: 220px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.no-comments {
+  font-size: 12px;
+  color: #718096;
+  font-style: italic;
+  margin: 4px 0;
+  text-align: center;
+}
+
+.comment-bubble {
+  padding: 8px 12px;
+  border-radius: 10px;
+  max-width: 90%;
+  font-size: 12px;
+}
+
+.comment-bubble.student {
+  background: rgba(27, 38, 59, 0.08);
+  border: 1px solid rgba(27, 38, 59, 0.15);
+  align-self: flex-start;
+}
+
+.comment-bubble.faculty {
+  background: rgba(59, 82, 50, 0.12);
+  border: 1px solid rgba(59, 82, 50, 0.25);
+  align-self: flex-end;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 2px;
+}
+
+.comment-sender {
+  font-weight: 700;
+  color: #1B263B;
+}
+
+.comment-time {
+  font-size: 10px;
+  color: #718096;
+}
+
+.comment-text {
+  margin: 0;
+  color: #1B263B;
+  line-height: 1.35;
+}
+
+.comment-form {
+  display: flex;
+  gap: 8px;
+}
+
+.comment-input {
+  flex: 1;
+  background: #FFFFFF;
+  border: 1px solid rgba(27, 38, 59, 0.15);
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: #1B263B;
+  font-size: 12px;
+  outline: none;
+}
+
+.comment-input:focus {
+  border-color: #3B5232;
+}
+
+.comment-send-btn {
+  background: #3B5232;
+  color: #FFFFFF;
+  border: none;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.comment-send-btn:hover {
+  background: #2F4228;
+}
