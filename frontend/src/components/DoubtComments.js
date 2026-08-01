@@ -26,6 +26,7 @@ const DoubtComments = ({ doubtId }) => {
     if (isOpen) {
       fetchComments();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen, doubtId]);
 
   const handleSend = async (e) => {

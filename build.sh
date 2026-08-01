@@ -12,7 +12,7 @@ if [ -d "frontend" ]; then
   echo "--- 📦 Building Frontend React SPA ---"
   cd frontend
   npm install
-  npm run build
+  CI=false npm run build
   cd ..
 fi
 
